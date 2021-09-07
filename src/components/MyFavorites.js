@@ -53,7 +53,7 @@ await this.setState({ selectobj: chocinf })
 let id=this.state.selectobj._id
 let data = await axios.put(`http://localhost:3001/updatedata/${id}`,chocinf)
     console.log(data.data)
-    await this.setState({ userdata: data.data })
+    // await this.setState({ userdata: data.data })
 
 
   
@@ -69,7 +69,7 @@ let data = await axios.put(`http://localhost:3001/updatedata/${id}`,chocinf)
 updatefromform=(e)=>{
   let chocinf={
     title:e.target.title.value,
-    imageUrl:e.target.title.value,
+    imageUrl:e.target.imageUrl.value,
     email:this.state.selectobj.email,
     _id:this.state.selectobj._id
 }
